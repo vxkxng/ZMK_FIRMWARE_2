@@ -85,8 +85,8 @@
         //│  (       │  )       │  [       │  ]       │    ~     │   │  {       │  }       │  =       │  \       │  `       │
             &kp LPAR   &kp RPAR  &kp LBKT &kp RBKT &kp TILDE       &kp LBRC  &kp RBRC  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │     |     │     -     │   │  _       │  _                │          │          │
-            &trans     &trans     &trans     &kp PIPE     &kp DASH     &kp UNDER   &kp AMPS  &trans   &trans   &trans
+        //│          │          │          │          │     |     │   │  _       │  _                │          │          │
+            &trans     &trans     &trans     &trans     &kp PIPE     &kp UNDER   &kp AMPS  &trans   &trans   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
