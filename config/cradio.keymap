@@ -40,6 +40,11 @@
     acceleration-exponent = <2>;
 };
 
+&mwh {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <1>;
+};
+
 / {
     behaviors {
 
@@ -53,7 +58,7 @@
             label = "THUMB_LAYER";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            quick-tap-ms   = <150>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
         };
@@ -68,7 +73,7 @@
             label = "THUMB_CAPS";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            quick-tap-ms   = <150>;
+            quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -83,7 +88,7 @@
             label = "THUMB_RIGHT";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            quick-tap-ms   = <150>;
+            quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -96,60 +101,60 @@
         /* ── 0 · Base (Colemak) ─────────────────────────── */
         default_layer {
             bindings = <
-            &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SEMI
-            &kp A         &kp R         &kp S         &kp T         &kp G             &kp M         &kp N         &kp E         &kp I         &kp O
-            &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp FSLH
-                                                      &tl 1 TAB     &tc LCTRL CAPS    &tl 2 ENTER   &tr RALT SPC
+            &kp Q       &kp W       &kp F       &kp P       &kp B         &kp J       &kp L       &kp U       &kp Y       &kp SEMI
+            &kp A       &kp R       &kp S       &kp T       &kp G         &kp M       &kp N       &kp E       &kp I       &kp O
+            &kp Z       &kp X       &kp C       &kp D       &kp V         &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
+                                          &tl 1 TAB   &tc LCTRL CLCK    &tl 2 ENTER &tr RALT SPC
             >;
         };
 
         /* ── 1 · Nav (hold left outer thumb) ───────────── */
         nav_layer {
             bindings = <
-            &kp ESC       &kp LG(W)     &kp LG(F)     &kp PSCRN     &kp INS           &kp PG_UP     &kp HOME      &kp UP        &kp END       &kp DEL
-            &kp LGUI      &kp LALT      &kp LSHFT     &kp LCTRL     &kp CAPS          &kp PG_DN     &kp LEFT      &kp DOWN      &kp RIGHT     &kp BSPC
-            &kp LC(Z)     &kp LC(X)     &kp LC(C)     &kp LC(D)     &kp LC(V)         &trans        &kp C_MUTE    &kp C_VOLD    &kp C_VOLU    &kp C_PP
-                                                      &trans        &trans            &sk LSHFT     &to 3
+            &kp ESC     &kp LG(W)   &kp LG(F)   &kp PSCRN   &kp INS       &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp DEL
+            &kp LGUI    &kp LALT    &kp LSHFT   &kp LCTRL   &kp CLCK      &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp BSPC
+            &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(D)   &kp LC(V)     &trans      &kp C_MUTE  &kp C_VOLD  &kp C_VOLU  &kp C_PP
+                                          &trans      &trans            &sk LSHFT   &to 3
             >;
         };
 
         /* ── 2 · Sym (hold right inner thumb) ──────────── */
         sym_layer {
             bindings = <
-            &kp BSLH      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS      &kp LBRC      &kp RBRC      &kp TILDE
-            &kp FSLH      &kp EXCL      &kp SQT       &kp DQT       &kp GRAVE         &kp UNDER     &kp EQUAL     &kp LPAR      &kp RPAR      &kp BSPC
-            &kp PIPE      &kp LT        &kp GT        &kp MINUS     &kp PLUS          &kp STAR      &kp LBKT      &kp RBKT      &kp SEMI      &kp COLN
-                                                      &to 4         &trans            &trans        &trans
+            &kp BSLH    &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)    &kp LS(N6)  &kp LS(N7)  &kp LBRC    &kp RBRC    &kp TILDE
+            &kp FSLH    &kp LS(N1)  &kp SQT     &kp LS(SQT) &kp GRAVE     &kp LS(MINUS) &kp EQUAL  &kp LS(N9)  &kp LS(N0)  &kp BSPC
+            &kp PIPE    &kp LS(COMMA) &kp LS(DOT) &kp MINUS &kp LS(EQUAL)  &kp LS(N8)  &kp LBKT    &kp RBKT    &kp SEMI    &kp LS(SEMI)
+                                          &to 4       &trans            &trans      &trans
             >;
         };
 
         /* ── 3 · Num/Fn (from Nav → right inner thumb) ─── */
         num_layer {
             bindings = <
-            &kp F6        &kp F7        &kp F8        &kp F9        &kp F10           &kp COMMA     &kp N7        &kp N8        &kp N9        &kp DOT
-            &kp F11       &sk LALT      &sk LSHFT     &sk LCTRL     &kp F12           &kp N0        &kp N4        &kp N5        &kp N6        &kp BSPC
-            &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &trans        &kp N1        &kp N2        &kp N3        &kp ENTER
-                                                      &to 0         &trans            &trans        &to 4
+            &kp F6      &kp F7      &kp F8      &kp F9      &kp F10       &kp COMMA   &kp N7      &kp N8      &kp N9      &kp DOT
+            &kp F11     &sk LALT    &sk LSHFT   &sk LCTRL   &kp F12       &kp N0      &kp N4      &kp N5      &kp N6      &kp BSPC
+            &kp F1      &kp F2      &kp F3      &kp F4      &kp F5        &trans      &kp N1      &kp N2      &kp N3      &kp ENTER
+                                          &to 0       &trans            &trans      &to 4
             >;
         };
 
         /* ── 4 · Mouse (from Sym → left outer thumb) ───── */
         mouse_layer {
             bindings = <
-            &trans        &mwh SCROLL_LEFT   &mmv MOVE_UP    &mwh SCROLL_RIGHT   &trans        &trans        &trans        &trans        &trans        &trans
-            &trans        &mmv MOVE_LEFT     &mmv MOVE_DOWN  &mmv MOVE_RIGHT     &trans        &trans        &mkp LCLK     &mkp MCLK     &mkp RCLK     &trans
-            &trans        &trans             &mwh SCROLL_UP  &mwh SCROLL_DOWN    &trans        &trans        &trans        &trans        &trans        &trans
-                                                             &to 0               &mkp LCLK     &mkp RCLK     &to 5
+            &trans      &mwh SCROLL_LEFT  &mmv MOVE_UP    &mwh SCROLL_RIGHT &trans    &trans      &trans      &trans      &trans      &trans
+            &trans      &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &trans    &trans      &mkp LCLK   &mkp MCLK   &mkp RCLK   &trans
+            &trans      &trans            &mwh SCROLL_UP  &mwh SCROLL_DOWN  &trans    &trans      &trans      &trans      &trans      &trans
+                                          &to 0       &mkp LCLK         &mkp RCLK   &to 5
             >;
         };
 
         /* ── 5 · Bluetooth (from Mouse → right inner) ──── */
         bt_layer {
             bindings = <
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans        &trans        &trans        &trans        &trans
-            &trans        &trans        &trans        &trans        &trans            &trans        &trans        &trans        &trans        &trans
-            &bt BT_PRV    &bt BT_NXT    &bt BT_CLR    &trans        &trans            &trans        &trans        &trans        &trans        &trans
-                                                      &to 0         &trans            &trans        &to 1
+            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &trans      &trans      &trans      &trans      &trans
+            &trans       &trans        &trans        &trans        &trans         &trans      &trans      &trans      &trans      &trans
+            &bt BT_PRV   &bt BT_NXT    &bt BT_CLR    &trans        &trans         &trans      &trans      &trans      &trans      &trans
+                                          &to 0       &trans            &trans      &to 1
             >;
         };
 
