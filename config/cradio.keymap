@@ -46,7 +46,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  F       │  P       │  G       │   │  J       │  L       │  U       │  Y       │  returns to alpha keys       │
-            &kp Q      &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &lt0 0 ESC
+            &kp Q      &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &kp ESC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  D       │   │  H       │  N       │  E       │  I       │ O     │
             HRML(A,        R,         S,         T)     &kp D          &kp H      HRMR(N,        E,         I,        O)
@@ -54,7 +54,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  K       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &lt 1 SPACE  &kp BKSP
+                                            &lt TAB 0   &lt 2 ENTER     &lt 1 SPACE  &kp BKSP
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -82,11 +82,11 @@
         //│          │          │          │          │  +       │   │  -       │         │         │         │        │
             &trans     &trans   &trans      &trans        &kp PLUS        &kp MINUS  &trans   &trans   &trans   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  (       │  )       │  [       │  ]       │    ~     │   │  {       │  }       │  =       │  \       │  `       │
-            &kp LPAR   &kp RPAR  &kp LBKT &kp RBKT &kp TILDE       &kp LBRC  &kp RBRC  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│  (       │  )       │  [       │  ]       │    ~     │   │  {       │  }       │  =       │  \       │  @       │
+            &kp LPAR   &kp RPAR  &kp LBKT &kp RBKT &kp TILDE       &kp LBRC  &kp RBRC  &kp EQUAL  &kp BSLH   &kp AT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │     |     │   │  _       │  _                │          │          │
-            &trans     &trans     &trans     &trans     &kp PIPE     &kp UNDER   &kp AMPS  &trans   &trans   &trans
+            &trans     &trans     &trans     &kp GRAVE    &kp PIPE     &kp UNDER   &kp AMPS  &trans   &trans   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -96,7 +96,7 @@
       tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │     │
+        //│ │          │          │          │PROFILE 0 │   │          │          │          │          │     │
            &trans  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
