@@ -55,7 +55,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  K       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp TAB  &lt 2 ENTER     &lt 1 SPACE  &bs_colon BSPC COLON
+                                            &kp TAB  &lt 2 ENTER     &lt 1 SPACE  &bs_colon COLON BSPC
 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
