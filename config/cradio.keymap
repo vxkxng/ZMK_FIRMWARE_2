@@ -85,7 +85,7 @@ left_layer {
         &kp EXCL  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET &kp AMPS   &kp STAR   &kp EQUAL  &kp PLUS
     //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
     //│  (       │  [       │  {       │  }       │  ]       │   │  )       │  \       │  ;       │  "       │  /       │
-        &kp LPAR  &kp LBKT   &kp LBRC   &kp RBRC   &kp RBKT       &kp RPAR  &kp BSLH   &kp SEMI   &kp QUOTE  &kp FSLH
+        &kp LPAR  &kp LBKT   &kp LBRC   &kp RBRC   &kp RBKT       &kp RPAR  &kp BSLH   &kp SEMI   &kp SQT  &kp FSLH
     //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
     //│  <       │  >       │  `       │  ~       │  |       │   │  _       │  -       │         │         │         │
         &kp LT    &kp GT     &kp GRAVE  &kp TILDE  &kp PIPE       &kp UNDER &kp MINUS   &trans     &trans      &trans
